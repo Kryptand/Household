@@ -56,7 +56,8 @@ namespace Kryptand.ChefMaster.Infrastructure.Ingredients
 			return await query.Where(specification.Criteria).ToListAsync();
 		}
 
-		public async Task<IEnumerable<Core.Ingredients.Ingredient>> GetAll() => await _dbContext.Ingredients.ToListAsync();
+		public async Task<IEnumerable<Core.Ingredients.Ingredient>> GetAll() => await _dbContext.Ingredients.Include(x=>x.IngredientType).ToListAsync();
+		public IQueryable<Core.Ingredients.Ingredient> GetAllAsQueryable() => _dbContext.Ingredients.Include(x => x.IngredientType).AsQueryable();
 
 		public async Task Update(Core.Ingredients.Ingredient ingredient)
 		{

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Kryptand.ChefMaster.Infrastructure.Ingredients;
 using Microsoft.AspNetCore.Mvc;
@@ -12,11 +13,31 @@ namespace Ingredient.Web.Controllers
 		private readonly IIngredientRepository _ingredientsRepository;
 		public IngredientsController(IIngredientRepository ingredientRepository) => _ingredientsRepository = ingredientRepository ?? throw new System.ArgumentNullException(nameof(ingredientRepository));
 		[HttpGet]
-		public async Task<IActionResult> GetAll()
+		public async Task<IActionResult> GetAll(Guid? categoryId,string ingredientName=null)
 		{
-			var contactList = await _ingredientsRepository.GetAll();
-			return Ok(contactList);
+			if (categoryId == null&&ingredientName==null)
+			{
+				var contactList = await _ingredientsRepository.GetAll();
+				return Ok(contactList);
+			}
+
+			var ingredientsQueryable = _ingredientsRepository.GetAllAsQueryable();
+			if(ingredientName==null){
+
+			}
+			if(categoryId==null&&ingredientName!=null){
+				var ingredientsFilteredByName = ingredientsQueryable.Where(x => x.Name.Contains(ingredientName)).ToList();
+				return Ok(ingredientsFilteredByName.ToList());
+			}
+			if(categoryId!=null&&ingredientName==null){
+				var ingredientsByCategory = ingredientsQueryable.Where(x => x.IngredientTypeId == categoryId).ToList();
+				return Ok(ingredientsByCategory);
+			}
+
+			var ingredientsByNameAndCategory = ingredientsQueryable.Where(x => x.IngredientTypeId == categoryId).Where(x => x.Name.Contains(ingredientName)).ToList();
+			return Ok(ingredientsByNameAndCategory);
 		}
+	
 		// GET: api/Ingredient/5
 		[HttpGet("{id}", Name = "GetIngredient")]
 		public async Task<IActionResult> GetById(Guid id)
