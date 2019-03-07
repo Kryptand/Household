@@ -21,35 +21,37 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Ingredient",
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C1CCD080-D953-4401-8245-27C80DEC5CBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe", "..\Recipe\Recipe.csproj", "{75D8560E-B24E-4649-B583-F3F92D64CC16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipe", "..\Recipe\Recipe.csproj", "{75D8560E-B24E-4649-B583-F3F92D64CC16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fridge", "Fridge\Fridge.csproj", "{4153B4D1-3F1A-4192-9280-F1B8CA0EF554}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fridge", "Fridge\Fridge.csproj", "{4153B4D1-3F1A-4192-9280-F1B8CA0EF554}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Fridge", "Infrastructure.Fridge\Infrastructure.Fridge.csproj", "{F2AB9995-DB4A-4154-9272-D981BE564F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Fridge", "Infrastructure.Fridge\Infrastructure.Fridge.csproj", "{F2AB9995-DB4A-4154-9272-D981BE564F71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Recipe", "Infrastructure.Recipe\Infrastructure.Recipe.csproj", "{B99833F8-AEB9-4763-9CAB-1448813C4FE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Recipe", "Infrastructure.Recipe\Infrastructure.Recipe.csproj", "{B99833F8-AEB9-4763-9CAB-1448813C4FE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe.Web", "Recipe.Web\Recipe.Web.csproj", "{03076A41-851F-49C9-88FA-02CA4FF6838C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recipe.Web", "Recipe.Web\Recipe.Web.csproj", "{03076A41-851F-49C9-88FA-02CA4FF6838C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fridge.Web", "Fridge.Web\Fridge.Web.csproj", "{792798B1-8756-49DF-A5EA-EC729D5A2AAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fridge.Web", "Fridge.Web\Fridge.Web.csproj", "{792798B1-8756-49DF-A5EA-EC729D5A2AAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disposal", "Disposal\Disposal.csproj", "{52F04F6D-9449-47B7-870E-3407BDFBAD70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Disposal", "Disposal\Disposal.csproj", "{52F04F6D-9449-47B7-870E-3407BDFBAD70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HousePlan", "HousePlan\HousePlan.csproj", "{5DC588D2-E222-4CD2-AC54-A008D79EBA25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HousePlan", "HousePlan\HousePlan.csproj", "{5DC588D2-E222-4CD2-AC54-A008D79EBA25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Disposal", "Infrastructure.Disposal\Infrastructure.Disposal.csproj", "{F0CF4624-154D-4D94-BBA6-F58AC5191CEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Disposal", "Infrastructure.Disposal\Infrastructure.Disposal.csproj", "{F0CF4624-154D-4D94-BBA6-F58AC5191CEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.HousePlan", "Infrastructure.HousePlan\Infrastructure.HousePlan.csproj", "{E835D6F0-E48A-42DA-AB6E-8BFE0EFCC740}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.HousePlan", "Infrastructure.HousePlan\Infrastructure.HousePlan.csproj", "{E835D6F0-E48A-42DA-AB6E-8BFE0EFCC740}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disposal.Web", "Disposal.Web\Disposal.Web.csproj", "{5374FB3D-4C47-4659-93B1-968336126538}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Disposal.Web", "Disposal.Web\Disposal.Web.csproj", "{5374FB3D-4C47-4659-93B1-968336126538}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HousePlan.Web", "HousePlan.Web\HousePlan.Web.csproj", "{1228115B-F5D1-4F72-BA4A-C23C1425A8BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HousePlan.Web", "HousePlan.Web\HousePlan.Web.csproj", "{1228115B-F5D1-4F72-BA4A-C23C1425A8BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_build", "_build", "{D2435A3D-1659-4747-B03F-698E5BEB52FE}"
 	ProjectSection(SolutionItems) = preProject
 		Dockerfile = Dockerfile
 		low-memory-my.cnf = low-memory-my.cnf
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Household.Frontend.Angular", "Household.Frontend.Angular\Household.Frontend.Angular.csproj", "{27949451-F9E1-4040-87D1-269BD2DFB335}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{1228115B-F5D1-4F72-BA4A-C23C1425A8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1228115B-F5D1-4F72-BA4A-C23C1425A8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1228115B-F5D1-4F72-BA4A-C23C1425A8BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27949451-F9E1-4040-87D1-269BD2DFB335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27949451-F9E1-4040-87D1-269BD2DFB335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27949451-F9E1-4040-87D1-269BD2DFB335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27949451-F9E1-4040-87D1-269BD2DFB335}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,6 +157,7 @@ Global
 		{E835D6F0-E48A-42DA-AB6E-8BFE0EFCC740} = {A1183C0F-6E6A-46D3-80A5-FE9481BB50BF}
 		{5374FB3D-4C47-4659-93B1-968336126538} = {1490D480-3FCC-4CF8-9D98-5EE390E3D83E}
 		{1228115B-F5D1-4F72-BA4A-C23C1425A8BA} = {1490D480-3FCC-4CF8-9D98-5EE390E3D83E}
+		{27949451-F9E1-4040-87D1-269BD2DFB335} = {1490D480-3FCC-4CF8-9D98-5EE390E3D83E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8CB63B2A-08AF-4F1B-BA8B-94FAC71F7783}

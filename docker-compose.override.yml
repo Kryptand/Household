@@ -38,7 +38,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44329
+      - ASPNETCORE_HTTPS_PORT=44330
     ports:
       - "52666:80"
       - "44330:443"
@@ -49,7 +49,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=44329
+      - ASPNETCORE_HTTPS_PORT=44331
     ports:
       - "52667:80"
       - "44331:443"

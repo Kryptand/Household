@@ -7,11 +7,11 @@ namespace Kryptand.ChefMaster.Infrastructure.Recipe
 {
 	public interface IRecipeRepository
 	{
-		Task Add(Core.Recipes.Recipe recipe);
-		Task<IEnumerable<Core.Recipes.Recipe>> Find(ISpecification<Core.Recipes.Recipe> specification);
-		Task<Core.Recipes.Recipe> FindById(Guid id);
-		Task<IEnumerable<Core.Recipes.Recipe>> GetAll();
+		Task Add(Kryptand.ChefMaster.Core.Recipes.Recipe recipe);
+		Task<IEnumerable<Kryptand.ChefMaster.Core.Recipes.Recipe>> Find(ISpecification<Kryptand.ChefMaster.Core.Recipes.Recipe> specification);
+		Task<Kryptand.ChefMaster.Core.Recipes.Recipe> FindById(Guid id);
+		Task<IEnumerable<Kryptand.ChefMaster.Core.Recipes.Recipe>> GetAll();
 		Task Remove(Guid id);
-		Task Update(Core.Recipes.Recipe recipe);
+		Task Update(Kryptand.ChefMaster.Core.Recipes.Recipe recipe);
 	}
 }

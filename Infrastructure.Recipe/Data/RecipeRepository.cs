@@ -13,7 +13,7 @@ namespace Kryptand.ChefMaster.Infrastructure.Recipe
 
 		public RecipeRepository(RecipeDbContext dbContext) => _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
 
-		public async Task Add(Core.Recipes.Recipe recipe)
+		public async Task Add(Kryptand.ChefMaster.Core.Recipes.Recipe recipe)
 		{
 			if (recipe == null)
 			{
@@ -38,7 +38,7 @@ namespace Kryptand.ChefMaster.Infrastructure.Recipe
 			await _dbContext.SaveChangesAsync();
 
 		}
-		public async Task<Core.Recipes.Recipe> FindById(Guid id)
+		public async Task<Kryptand.ChefMaster.Core.Recipes.Recipe> FindById(Guid id)
 		{
 			if (id == null)
 			{
@@ -47,7 +47,7 @@ namespace Kryptand.ChefMaster.Infrastructure.Recipe
 			return await _dbContext.Recipes.SingleOrDefaultAsync(a => a.Id == id);
 
 		}
-		public async Task<IEnumerable<Core.Recipes.Recipe>> Find(ISpecification<Core.Recipes.Recipe> specification)
+		public async Task<IEnumerable<Kryptand.ChefMaster.Core.Recipes.Recipe>> Find(ISpecification<Kryptand.ChefMaster.Core.Recipes.Recipe> specification)
 		{
 			if (specification == null)
 			{
@@ -57,9 +57,9 @@ namespace Kryptand.ChefMaster.Infrastructure.Recipe
 			return await query.Where(specification.Criteria).ToListAsync();
 		}
 
-		public async Task<IEnumerable<Core.Recipes.Recipe>> GetAll() => await _dbContext.Recipes.Include(x=>x.Ingredients).Include(y=>y.RecipeSteps).Include(z=>z.RecipeImages).ToListAsync();
+		public async Task<IEnumerable<Kryptand.ChefMaster.Core.Recipes.Recipe>> GetAll() => await _dbContext.Recipes.Include(x=>x.Ingredients).Include(y=>y.RecipeSteps).Include(z=>z.RecipeImages).ToListAsync();
 
-		public async Task Update(Core.Recipes.Recipe recipe)
+		public async Task Update(Kryptand.ChefMaster.Core.Recipes.Recipe recipe)
 		{
 			if (recipe == null)
 			{
