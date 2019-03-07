@@ -1,0 +1,135 @@
+version: '3.4'
+
+services:
+#disposal
+  disposal.storage:
+    image: mysql:latest
+    container_name: disposal-storage-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "p4ssw0r#"
+      MYSQL_DATABASE: "disposal"
+    volumes:
+      - ./disposal-mysql-data:/var/lib/mysql
+    restart: always
+    networks:
+      - disposal-web-net
+
+  disposal.web:
+    image: ${DOCKER_REGISTRY}ingredientweb
+    build:
+      context: .
+      dockerfile: Disposal.Web/Dockerfile
+    depends_on:
+      - disposal.storage
+    networks:
+      - disposal-web-net
+
+#houseplan
+  houseplan.storage:
+    image: mysql:latest
+    container_name: houseplan-storage-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "p4ssw0r#"
+      MYSQL_DATABASE: "houseplan"
+    volumes:
+      - ./houseplan-mysql-data:/var/lib/mysql
+    restart: always
+    networks:
+      - houseplan-web-net
+
+  houseplan.web:
+    image: ${DOCKER_REGISTRY}ingredientweb
+    build:
+      context: .
+      dockerfile: Houseplan.Web/Dockerfile
+    depends_on:
+      - houseplan.storage
+    networks:
+      - houseplan-web-net
+
+#recipes
+  recipe.storage:
+    image: mysql:latest
+    container_name: recipe-storage-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "p4ssw0r#"
+      MYSQL_DATABASE: "recipes"
+    volumes:
+      - ./recipe-mysql-data:/var/lib/mysql
+    restart: always
+    networks:
+      - recipe-web-net
+
+  recipe.web:
+    image: ${DOCKER_REGISTRY}ingredientweb
+    build:
+      context: .
+      dockerfile: Recipe.Web/Dockerfile
+    depends_on:
+      - recipe.storage
+    networks:
+      - recipe-web-net
+
+#fridge
+  fridge.storage:
+    image: mysql:latest
+    container_name: fridge-storage-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "p4ssw0r#"
+      MYSQL_DATABASE: "fridge"
+    volumes:
+      - ./fridge-mysql-data:/var/lib/mysql
+    restart: always
+    networks:
+      - fridge-web-net
+
+  fridge.web:
+    image: ${DOCKER_REGISTRY}ingredientweb
+    build:
+      context: .
+      dockerfile: Fridge.Web/Dockerfile
+    depends_on:
+      - fridge.storage
+    networks:
+      - fridge-web-net
+
+#ingredients
+  ingredient.storage:
+    image: mysql:latest
+    container_name: ingredient-storage-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "p4ssw0r#"
+      MYSQL_DATABASE: "ingredients"
+    volumes:
+      - ./ingredient-mysql-data:/var/lib/mysql
+    restart: always
+    networks:
+      - ingredient-web-net
+  ingredient.web:
+    image: ${DOCKER_REGISTRY}ingredientweb
+    build:
+      context: .
+      dockerfile: Ingredient.Web/Dockerfile
+    depends_on:
+      - ingredient.storage
+    networks:
+      - ingredient-web-net
+
+volumes:
+  fridge-mysql-data:
+  recipe-mysql-data:
+  disposal-mysql-data:
+  houseplan-mysql-data:
+  ingredient-mysql-data:
+
+networks:
+  ingredient-web-net:
+    driver: bridge
+  fridge-web-net:
+    driver: bridge
+  recipe-web-net:
+    driver: bridge
+  disposal-web-net:
+    driver: bridge
+  houseplan-web-net:
+    driver: bridge
